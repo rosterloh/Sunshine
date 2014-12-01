@@ -6,12 +6,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.rosterloh.sunshine.app.MainActivity"
-            android:label="@string/app_name" >
+            android:theme="@style/ForecastTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rosterloh.sunshine.app.DetailActivity"
             android:label="@string/title_activity_detail"
+            android:name="com.rosterloh.sunshine.app.DetailActivity"
             android:parentActivityName="com.rosterloh.sunshine.app.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

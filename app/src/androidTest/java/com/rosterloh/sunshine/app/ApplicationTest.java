@@ -1,4 +1,4 @@
-package com.rosterloh.sunshine.sunshine;
+package com.rosterloh.sunshine.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

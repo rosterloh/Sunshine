@@ -26,6 +26,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.rosterloh.sunshine.app.MainActivity" />
         </activity>
+        <activity
+            android:label="@string/title_activity_settings"
+            android:name="com.rosterloh.sunshine.app.SettingsActivity"
+            android:parentActivityName="com.rosterloh.sunshine.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rosterloh.sunshine.app.MainActivity" />
+        </activity>
+        <provider
+            android:authorities="com.rosterloh.sunshine.app"
+            android:name=".data.WeatherProvider" />
     </application>
 
 </manifest>

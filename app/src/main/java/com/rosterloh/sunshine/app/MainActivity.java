@@ -24,6 +24,7 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new ForecastFragment())
                     .commit();
         }
+        //getSupportActionBar().getThemedContext()
     }
 
     @Override
@@ -39,16 +40,15 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            getFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new SettingsFragment())
-                    .commit();
-            return true;
+        switch (id) {
+            case R.id.action_settings:
+                startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+            case R.id.action_map:
+                openPreferredLocationInMap();
+                return true;
         }
-        if (id == R.id.action_map) {
-            openPreferredLocationInMap();
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 

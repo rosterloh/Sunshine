@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
 import com.rosterloh.sunshine.app.data.WeatherContract;
+import com.rosterloh.sunshine.app.sync.SunshineSyncAdapter;
 
 /**
  + * A {@link PreferenceFragment} that presents a set of application settings.
@@ -71,9 +72,7 @@ public class SettingsActivity extends ActionBarActivity {
             // are we starting the preference activity?
             if ( !mBindingPreference ) {
                 if (preference.getKey().equals(getString(R.string.pref_location_key))) {
-                    FetchWeatherTask weatherTask = new FetchWeatherTask(getActivity());
-                    String location = value.toString();
-                    weatherTask.execute(location);
+                    SunshineSyncAdapter.syncImmediately(getActivity());
                 } else {
                     // notify code that weather may be impacted
                     getActivity().getContentResolver().notifyChange(WeatherContract.WeatherEntry.CONTENT_URI, null);

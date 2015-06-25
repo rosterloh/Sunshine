@@ -40,7 +40,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
             android:textAppearance="?android:textAppearanceSmall"/>
-
     </LinearLayout>
 
     <LinearLayout

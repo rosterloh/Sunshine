@@ -1,14 +1,13 @@
 package com.rosterloh.sunshine.app;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DetailActivity extends ActionBarActivity {
 
-    public static final String DATE_KEY = "forecast_date";
+public class DetailActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +17,9 @@ public class DetailActivity extends ActionBarActivity {
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
-            String date = getIntent().getStringExtra(DATE_KEY);
 
             Bundle arguments = new Bundle();
-            arguments.putString(DetailActivity.DATE_KEY, date);
+            arguments.putParcelable(DetailFragment.DETAIL_URI, getIntent().getData());
 
             DetailFragment fragment = new DetailFragment();
             fragment.setArguments(arguments);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2015 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.sunshine.app.data;
+package com.rosterloh.sunshine.app.data;
 
 import android.content.UriMatcher;
 import android.net.Uri;
@@ -30,11 +30,11 @@ public class TestUriMatcher extends AndroidTestCase {
     private static final long TEST_DATE = 1419033600L;  // December 20th, 2014
     private static final long TEST_LOCATION_ID = 10L;
 
-    // content://com.example.android.sunshine.app/weather"
+    // content://com.rosterloh.sunshine.app/weather"
     private static final Uri TEST_WEATHER_DIR = WeatherContract.WeatherEntry.CONTENT_URI;
     private static final Uri TEST_WEATHER_WITH_LOCATION_DIR = WeatherContract.WeatherEntry.buildWeatherLocation(LOCATION_QUERY);
     private static final Uri TEST_WEATHER_WITH_LOCATION_AND_DATE_DIR = WeatherContract.WeatherEntry.buildWeatherLocationWithDate(LOCATION_QUERY, TEST_DATE);
-    // content://com.example.android.sunshine.app/location"
+    // content://com.rosterloh.sunshine.app/location"
     private static final Uri TEST_LOCATION_DIR = WeatherContract.LocationEntry.CONTENT_URI;
 
     /*
